@@ -1,9 +1,6 @@
-import { Button } from "@/components/ui/button";
-import { Link, useNavigate } from "react-router-dom";
+import { Button } from "./ui/button";
 
-export default function NotFound() {
-  const navigate = useNavigate();
-
+export default function Error() {
   return (
     <section className="bg-white dark:bg-gray-900 ">
       <div className="container flex items-center min-h-screen px-6 py-12 mx-auto">
@@ -17,7 +14,7 @@ export default function NotFound() {
           </p>
           <div className="flex items-center mt-6 gap-x-3 sm:w-full">
             <Button
-              onClick={() => navigate(-1)}
+              onClick={() => console.log("wkwkwk")}
               className="flex items-center justify-center w-1/2 px-5 py-2 text-sm "
               variant={"ghost"}
             >
@@ -32,9 +29,6 @@ export default function NotFound() {
                 <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18" />
               </svg>
               <span>Kembali</span>
-            </Button>
-            <Button asChild className="w-1/2 px-5 py-2 text-sm tracking-wide ">
-              <Link to="/">Halaman Utama</Link>
             </Button>
           </div>
         </div>
