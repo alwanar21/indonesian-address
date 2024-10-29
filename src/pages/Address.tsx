@@ -1,3 +1,5 @@
+import TableLoading from "@/components/TableLoading";
+
 export default function Address() {
-  return <div>Address</div>;
+  return <TableLoading />;
 }

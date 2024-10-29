@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { useEffect, useState } from "react";
@@ -19,8 +19,10 @@ export default function Header() {
 
   return (
     <div className="">
-      <div className="container flex items-center justify-between mx-auto px-4 py-5">
-        <div className="text-lg font-bold text-gray-900">Indonesian Address</div>
+      <div className="container flex items-center justify-between mx-auto px-4 py-3 sm:py-5">
+        <Link to="/" className="text-lg font-bold text-gray-900">
+          Indonesian Address
+        </Link>
         <div className=" gap-2 items-center hidden sm:flex">
           <NavLink
             to="/"
