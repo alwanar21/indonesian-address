@@ -19,10 +19,21 @@ export default function SearchInput() {
       setSearchParams({ search: query });
     }
   };
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter") {
+      handleSearch();
+    }
+  };
 
   return (
     <div className="flex w-full max-w-sm items-center space-x-2 mx-auto mt-4">
-      <Input type="text" placeholder="Cari..." value={query} onChange={(e) => setQuery(e.target.value)} />
+      <Input
+        type="text"
+        placeholder="Cari..."
+        value={query}
+        onKeyDown={handleKeyDown}
+        onChange={(e) => setQuery(e.target.value)}
+      />
       <Button type="button" onClick={handleSearch}>
         Cari
       </Button>
